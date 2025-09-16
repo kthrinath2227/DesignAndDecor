@@ -190,7 +190,7 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
-	base: '/VOFstudio/',
+	base: '/DesignAndDecor/',
 
 	customLogger: logger,
 	plugins: [
