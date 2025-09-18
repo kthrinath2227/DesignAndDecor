@@ -43,11 +43,28 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>VOF Studio - Professional Photography & Photoshoot Services</title>
-        <meta name="description" content="Professional photography studio specializing in creative photoshoots, architectural photography, and visual storytelling. Bringing your vision to life through innovative photography." />
-        <meta property="og:title" content="VOF Studio - Professional Photography & Photoshoot Services" />
-        <meta property="og:description" content="Professional photography studio specializing in creative photoshoots, architectural photography, and visual storytelling. Bringing your vision to life through innovative photography." />
-      </Helmet>
+  <title>D LUXURIO | Professional Interior Design & Premium Furniture</title>
+  
+  <meta 
+    name="description" 
+    content="D LUXURIO offers luxury interior design solutions and premium furniture. We specialize in modern, timeless, and functional interiors that elevate every space." 
+  />
+  
+  {/* Open Graph for social sharing */}
+  <meta 
+    property="og:title" 
+    content="D LUXURIO | Professional Interior Design & Premium Furniture" 
+  />
+  <meta 
+    property="og:description" 
+    content="Transform your spaces with D LUXURIO’s expert interior design and high-quality premium furniture. Creating luxury homes and commercial interiors with elegance." 
+  />
+  
+  {/* Optional: SEO extras */}
+  <meta name="keywords" content="interior design, luxury furniture, home decor, modern interiors, D LUXURIO" />
+  <meta name="author" content="D LUXURIO Studio" />
+</Helmet>
+
 
       <div className="min-h-screen bg-gray-50 text-gray-800 overflow-x-hidden pt-16">
         <Navbar />

@@ -190,8 +190,8 @@ logger.error = (msg, options) => {
 }
 
 export default defineConfig({
-	base: '/DesignAndDecor/',
-
+	plugins: [react()],
+  base: '/DesignAndDecor/',
 	customLogger: logger,
 	plugins: [
 		...(isDev ? [inlineEditPlugin(), editModeDevPlugin()] : []),

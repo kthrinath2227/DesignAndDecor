@@ -23,7 +23,7 @@ export function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg text-gray-500">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-sm text-white shadow-lg">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -34,8 +34,7 @@ export function Navbar() {
             transition={{ duration: 0.6 }}
             onClick={() => handleNavClick('hero')}
           >
-            <span className="text-gray-800 ml-2">VOF</span>
-            <span className="text-gray-500 ml-2 text-sm">STUDIO</span>
+            <span className="text-gray-800 ml-2">D LUXURIO</span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -55,15 +54,11 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Desktop Button (optional extra action) */}
-          <motion.button
-            className="hidden md:flex w-8 h-8 border border-gray-400 items-center justify-center hover:border-gray-800 transition-colors"
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="w-2 h-2 bg-gray-800"></div>
-          </motion.button>
+          {/* Center Divider with Text */}
+          <div className="relative flex items-center justify-center">
+            <span className="absolute w-full border-t border-gray-500 top-1/2"></span>
+            <span className="bg-gray-900 px-2 text-sm text-gray-100">DESIGN</span>
+          </div>
 
           {/* Mobile Hamburger */}
           <button
@@ -87,7 +82,7 @@ export function Navbar() {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden bg-white/90 border-t border-gray-200 backdrop-blur-lg"
+            className="md:hidden bg-white/90 border-t border-gray-200 backdrop-blur-lg shadow-md"
           >
             <div className="flex flex-col py-4 space-y-4 px-6">
               {navItems.map((item) => (
