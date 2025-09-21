@@ -9,12 +9,13 @@ const images = [
 
 export function HeroSection({ scrollToSection }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const duration = 10000; // 15s
 
-  // Change slide every 15s
+  // Auto slide every 15s
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
-    }, 15000);
+    }, duration);
     return () => clearInterval(interval);
   }, []);
 
@@ -25,23 +26,48 @@ export function HeroSection({ scrollToSection }) {
     >
       {/* Background Slideshow */}
       <div className="absolute inset-0">
-        <AnimatePresence>
-          <motion.img
-            key={currentIndex}
-            src={images[currentIndex]}
-            alt="Dynamic architectural background"
-            className="absolute inset-0 w-full h-full object-cover"
-            initial={{ opacity: 0, scale: 1 }}
-            animate={{ opacity: 1, scale: 1.15 }} // slow zoom in
-            exit={{ opacity: 0, scale: 1.2 }}
-            transition={{
-              opacity: { duration: 2 },
-              scale: { duration: 15, ease: "linear" },
-            }}
-          />
-        </AnimatePresence>
+        <AnimatePresence mode="wait" initial={false}>
+  <motion.div
+    key={currentIndex}
+    className="absolute inset-0"
+  >
+    <motion.img
+      src={images[currentIndex]}
+      alt="Dynamic architectural background"
+      className="w-full h-full object-cover"
+      initial={{ scale: 1 }}
+      animate={{ scale: 1.15 }}
+      transition={{ duration: duration / 1000, ease: "linear" }}
+    />
+  </motion.div>
+</AnimatePresence>
+
+
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gray-900/40"></div>
+      </div>
+
+      {/* Top Progress Bars */}
+      <div className="absolute top-6 left-1/2 -translate-x-1/2 flex gap-2 w-[30%] max-w-2xl z-20">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            onClick={() => setCurrentIndex(index)}
+            className="flex-1 h-1 bg-gray-400 rounded-full cursor-pointer overflow-hidden"
+          >
+            {index === currentIndex && (
+              <motion.div
+                className="h-full bg-gray-200"
+                initial={{ width: "0%" }}
+                animate={{ width: "100%" }}
+                transition={{ duration: duration / 1000, ease: "linear" }}
+              />
+            )}
+            {index < currentIndex && (
+              <div className="h-full w-full bg-gray-100"></div>
+            )}
+          </div>
+        ))}
       </div>
 
       {/* Mouse Scroll Down Button */}

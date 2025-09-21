@@ -5,10 +5,11 @@ import { Navbar } from '@/components/common/Navbar';
 import { SocialSidebar } from '@/components/common/SocialSidebar';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { AboutSection } from '@/components/sections/AboutSection';
-import { StatsSection } from '@/components/sections/StatsSection';
-import { PortfolioSection } from '@/components/sections/PortfolioSection';
+import { ServicesSection } from '@/components/sections/ServicesSection';
+import { Portfolio } from '@/components/sections/Portfolio';
 import { ContactSection } from '@/components/sections/ContactSection';
 import { Footer } from '@/components/common/Footer';
+import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
 
 function App() {
   const [currentSection, setCurrentSection] = useState(0);
@@ -16,7 +17,7 @@ function App() {
   const sections = [
     { id: 'hero', title: 'Hero' },
     { id: 'about', title: 'About' },
-    { id: 'stats', title: 'Stats' },
+    { id: 'Services', title: 'Services' },
     { id: 'portfolio', title: 'Portfolio' },
     { id: 'contact', title: 'Contact' }
   ];
@@ -69,10 +70,11 @@ function App() {
       <div className="min-h-screen bg-gray-50 text-gray-800 overflow-x-hidden pt-16">
         <Navbar />
         <SocialSidebar />
-        <HeroSection scrollToSection={scrollToSection} />
+        <HeroSection scrollToSection={scrollToSection}  />
         <AboutSection />
-        <StatsSection />
-        <PortfolioSection />
+        <ServicesSection />
+        <ProcessTimeline />
+        <Portfolio />
         <ContactSection />
         <Footer scrollToSection={scrollToSection} />
         <Toaster />

@@ -5,13 +5,12 @@
 	"private": true,
 	"homepage": "https://kthrinath2227.github.io/DesignAndDecor",
 	"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d dist --no-history"
-},
-
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist --no-history"
+	},
 	"dependencies": {
 		"@radix-ui/react-alert-dialog": "^1.0.5",
 		"@radix-ui/react-avatar": "^1.0.3",
@@ -30,6 +29,7 @@
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-helmet": "^6.1.0",
+		"react-router-dom": "^7.9.1",
 		"tailwind-merge": "^1.14.0",
 		"tailwindcss-animate": "^1.0.7"
 	},
