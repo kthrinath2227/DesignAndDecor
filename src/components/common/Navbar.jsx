@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
-export function Navbar() {
+export function Navbar({ scrollToSection }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // ✅ Define nav items with section IDs
@@ -14,10 +14,14 @@ export function Navbar() {
     { label: 'CONTACT', id: 'contact' },
   ];
 
-  const handleNavClick = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (id, index) => {
+    if (scrollToSection) {
+      scrollToSection(index); // ✅ exit decor mode + scroll
+    } else {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     }
     setIsMobileMenuOpen(false); // close menu after click
   };
@@ -32,7 +36,7 @@ export function Navbar() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            onClick={() => handleNavClick('hero')}
+            onClick={() => handleNavClick('hero', 0)}
           >
             <span className="text-gray-800 ml-2">D LUXURIO</span>
           </motion.div>
@@ -42,7 +46,7 @@ export function Navbar() {
             {navItems.map((item, index) => (
               <motion.button
                 key={item.id}
-                onClick={() => handleNavClick(item.id)}
+                onClick={() => handleNavClick(item.id, index)}
                 className="text-sm font-light tracking-wider hover:text-gray-600 transition-colors relative group"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -85,10 +89,10 @@ export function Navbar() {
             className="md:hidden bg-white/90 border-t border-gray-200 backdrop-blur-lg shadow-md"
           >
             <div className="flex flex-col py-4 space-y-4 px-6">
-              {navItems.map((item) => (
+              {navItems.map((item, index) => (
                 <button
                   key={item.id}
-                  onClick={() => handleNavClick(item.id)}
+                  onClick={() => handleNavClick(item.id, index)}
                   className="text-left text-gray-700 hover:text-gray-900 text-sm font-light tracking-wider"
                 >
                   {item.label}

@@ -78,6 +78,33 @@ html {
     transform: translateX(0);
   }
 }
+*shine-icon {
+          position: relative;
+          overflow: hidden;
+        }
+        *shine-icon::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -150%;
+          width: 200%;
+          height: 100%;
+          background: linear-gradient(
+            120deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.7) 50%,
+            transparent 70%
+          );
+          animation: shine 5s infinite;
+        }
+        @keyframes shine {
+          0% {
+            left: -150%;
+          }
+          100% {
+            left: 150%;
+          }
+        }
 
 .animate-fade-in-up {
   animation: fadeInUp 0.8s ease-out;
