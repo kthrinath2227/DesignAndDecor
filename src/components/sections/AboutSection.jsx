@@ -5,10 +5,10 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-gray-100 text-gray-800 flex items-center ml-20"
+      className="min-h-screen bg-[#CBB37E] text-gray-800 flex items-center"
     >
-      <div className="max-w-7xl mx-auto ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start px-6 py-20">
+      <div className="w-full mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start px-6 py-20 ml-20">
           {/* Left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -17,7 +17,7 @@ export function AboutSection() {
             viewport={{ once: true }}
           >
             <div className="space-y-6">
-              <p className="text-sm tracking-widest font-semibold text-gray-400 uppercase">
+              <p className="text-sm tracking-widest font-semibold text-gray-600 uppercase">
                 What We Do
               </p>
               <h2 className="text-4xl mb-2 md:text-5xl font-bold leading-tight">
@@ -53,9 +53,9 @@ export function AboutSection() {
             viewport={{ once: true }}
           >
             {/* Background 01 */}
-            <div className="text-9xl font-light text-gray-300 absolute -top-16 -right-8 z-0">
+            {/* <div className="text-9xl font-light text-gray-300 absolute -top-16 -right-8 z-0">
               01
-            </div>
+            </div> */}
 
             {/* Second Image + Description */}
             <div className="relative z-10">
@@ -85,28 +85,22 @@ export function AboutSection() {
             </div>
           </motion.div>
         </div>
-        <div className="m-5">
-          <motion.div
-          className="overflow-hidden rounded-lg"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.img
-            alt="Aerial view of modern resort with pool"
-            className="w-full h-full object-cover"
-            src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758210768/Design-decor-2_snsxmd.jpg"
-            initial={{ scale: 1 }}
-            animate={{ scale: 1.1 }}
-            transition={{
-              duration: 20,
-              repeat: Infinity,
-              repeatType: 'reverse',
-              ease: 'linear',
-            }}
-          />
-        </motion.div>
+        <div>
+          <motion.div className="w-screen h-screen overflow-hidden">
+  <motion.img
+    alt="Aerial view of modern resort with pool"
+    className="w-full h-full object-cover"
+    src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758210768/Design-decor-2_snsxmd.jpg"
+    initial={{ scale: 1 }}
+    animate={{ scale: 1.1 }}
+    transition={{
+      duration: 20,
+      repeat: Infinity,
+      repeatType: "reverse",
+      ease: "linear",
+    }}
+  />
+</motion.div>
         </div>
       </div>
     </section>

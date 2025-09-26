@@ -27,19 +27,26 @@ export function Navbar({ scrollToSection }) {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-sm text-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-900 backdrop-blur-sm text-[#dbb980] shadow-lg">
+      <div className="max-w-7xl mx-4 px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            className="text-2xl font-light tracking-wider cursor-pointer"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            onClick={() => handleNavClick('hero', 0)}
-          >
-            <span className="text-gray-800 ml-2">D LUXURIO</span>
-          </motion.div>
+         <motion.div
+  className="cursor-pointer flex items-center"
+  initial={{ opacity: 0, x: -20 }}
+  animate={{ opacity: 1, x: 0 }}
+  transition={{ duration: 0.6 }}
+  onClick={() => handleNavClick('hero', 0)}
+>
+  <img
+  alt="Logo"
+  src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758805302/DESIGN_DECOR_1_bmhkp8.png"
+  className="w-[160px] h-[50px]"
+/>
+
+</motion.div>
+
+
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -61,7 +68,7 @@ export function Navbar({ scrollToSection }) {
           {/* Center Divider with Text */}
           <div className="relative flex items-center justify-center">
             <span className="absolute w-full border-t border-gray-500 top-1/2"></span>
-            <span className="bg-gray-900 px-2 text-sm text-gray-100">DESIGN</span>
+            <span className="bg-gray-900 px-2 text-sm text-[#dbb980]">DESIGN</span>
           </div>
 
           {/* Mobile Hamburger */}

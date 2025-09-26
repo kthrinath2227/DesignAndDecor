@@ -13,11 +13,11 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="min-h-screen relative bg-gray-100 text-gray-800 ml-20">
+    <section id="contact" className="min-h-screen relative bg-[#CBB37E] text-gray-800 ">
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto ">
 
-        <div className="mb-10">
+        <div className="mb-10 ml-20 px-6 py-20">
       <div className="text-gray-800 p-1">
         {/* Heading */}
         <h1 className="text-3xl md:text-4xl font-extrabold mb-6 tracking-wide flex items-center gap-3">
@@ -61,18 +61,12 @@ export function ContactSection() {
         </div>
       </div>
     </div>
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-16">
-          <motion.div
-            className="lg:col-span-1"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="text-6xl font-light tracking-wider mb-8">
-              <span className="text-gray-800">Dluxurio</span>
-            </div>
-          </motion.div>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-16 ml-20">
+          <img
+  alt="Logo"
+  src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758805302/DESIGN_DECOR_1_bmhkp8.png"
+  className="w-[160px] h-[50px]"
+/>
 
           <motion.div
             className="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8"
@@ -99,15 +93,37 @@ export function ContactSection() {
               <p className="text-lg leading-relaxed">
                 Shivam Building, 3rd Floor<br/>Sriram Nagar, Botanical Garden Road<br/>Kondapur, Hyderabad - 500084
               </p>
-              <button
-                onClick={handleButtonClick}
-                className="text-sm tracking-wider mt-4 hover:text-gray-300 transition-colors underline"
-              >
-                VIEW ON MAP
-              </button>
+              
             </div>
           </motion.div>
+          
+        
+
         </div>
+        <div className="w-full relative ml-10 px-5">
+  <button
+    onClick={handleButtonClick}
+    className="text-sm tracking-wider mt-4 hover:text-gray-300 transition-colors underline"
+  >
+    VIEW ON MAP
+  </button>
+
+  <div className="relative mt-4 w-full overflow-hidden">
+    <img
+      src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758806876/gmaps_tzqy3g.png"
+      alt="Map"
+      className="w-screen h-auto object-cover"
+    />
+
+    {/* Top White Fade */}
+    <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-white to-transparent pointer-events-none" />
+
+    {/* Bottom White Fade */}
+    <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-white to-transparent pointer-events-none" />
+  </div>
+</div>
+
+
       </div>
     </section>
   );

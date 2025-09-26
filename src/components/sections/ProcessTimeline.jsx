@@ -44,19 +44,13 @@ export function ProcessTimeline() {
   const height = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-   <section id="process" className="relative min-h-screen bg-gray-100 text-gray-800 px-6 py-16">
+   <section id="process" className="relative min-h-screen bg-[#CBB37E] text-gray-800 px-6 py-16">
       
-      <div className="max-w-6xl mx-auto">
-        <div className="text-9xl font-light mt-5 text-gray-400 absolute -top-1 -right-1 z-0">
-              03
-            </div>
-        
-        
-        {/* Header */}
+      <div className="max-w-6xl mx-auto ml-20">
         <div className="text-center mb-16">
           
           <h2 className="text-4xl font-semibold mb-2">Our Process</h2>
-          <p className="text-gray-400">
+          <p className="text-gray-700">
             We keep things simple, clear, and effective.
           </p>
         </div>

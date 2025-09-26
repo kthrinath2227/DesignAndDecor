@@ -40,10 +40,10 @@ export function Portfolio() {
           <div className="text-8xl font-light text-gray-500">
               04
             </div>
-          <p className="text-sm tracking-widest text-gray-400 uppercase mb-2">
+          <p className="text-sm tracking-widest text-[#dbb980] uppercase mb-2">
             Projects
           </p>
-          <h2 className="text-4xl font-semibold">Recent Projects</h2>
+          <h2 className="text-4xl text-[#bba47d] font-semibold">Recent Projects</h2>
         </div>
 
         {/* Masonry Grid */}
@@ -87,7 +87,7 @@ export function Portfolio() {
         <div className="mt-12 text-center">
           <a
             href="/AllProjects"
-            className="px-8 py-3 bg-gray-200 text-black font-medium rounded-full shadow-lg hover:bg-white transition"
+            className="px-8 py-3 bg-[#CBB37E] text-black font-medium rounded-full shadow-lg hover:bg-white transition"
           >
             View All Projects
           </a>
