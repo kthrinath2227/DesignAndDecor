@@ -3,7 +3,7 @@
 	"type": "module",
 	"version": "0.0.0",
 	"private": true,
-	"homepage": ".",
+	"homepage": "https://designdecor.co.in/",
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
