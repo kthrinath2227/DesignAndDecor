@@ -5,8 +5,8 @@ export function Footer({ scrollToSection }) {
   const { toast } = useToast();
 
   return (
-    <footer className="bg-gray-900 relative z-10 max-w-7xl mx-auto px-6 py-8 ml-20">
-      <div className="flex justify-between items-center pt-8 border-t border-gray-100">
+    <footer className="bg-gray-900 w-full px-6 py-8">
+      <div className="flex justify-between items-center pt-8 border-t border-gray-100 max-w-screen-xl mx-auto">
         {/* ✅ Clickable link */}
         <a
           href="https://thedevstechnologies.online"

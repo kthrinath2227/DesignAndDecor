@@ -1,48 +1,53 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Award, ShieldCheck, Truck } from "lucide-react";
+import { ChevronDown, Award, ShieldCheck, Truck , Brush, TestTubes, BringToFront} from "lucide-react";
 
 export function ResinArtSection() {
   const projects = [
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808882/Scandinavian_Solid_Wood_Storage_with_Headboard_Panel_Standard_Bed_-_California_King_Single_Bed_Beds_ezamid.jpg",
-      title: "Luxury King Bed",
-      description:
-        "Premium comfort with elegant design, crafted for restful nights.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808882/King_Size_Cot_Designs_for_Spacious_Comfort_lgs6bc.jpg",
-      title: "Modern Platform Bed",
-      description: "Minimalist style designed for contemporary and sleek interiors.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808887/carlos-masias-f3z1EjsxPCs-unsplash_bgx9au.jpg",
-      title: "Classic Wooden Bed",
-      description: "Timeless craftsmanship meets unmatched comfort and durability.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808881/download_hyrzjx.jpg",
-      title: "Upholstered Bed Frame",
-      description:
-        "Soft, padded headboard for cozy luxury and modern aesthetics.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808881/Bedroom_lwbx29.jpg",
-      title: "Canopy Bed",
-      description: "Elegant design with a touch of grandeur and sophistication.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808891/poojan-thanekar-u-RIsXlI8Q8-unsplash_dnpzpr.jpg",
-      title: "Storage Bed",
-      description: "Smart functionality with generous built-in storage for modern living",
-    },
-  ];
+  {
+    image:
+      "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758953509/3e63873f63820dee0dc26ed48b99c620_fi1do1.jpg",
+    title: "Resin Wall Art",
+    description:
+      "Captivating resin wall designs that bring depth, color, and elegance to your interiors.",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758953508/8be60ec80a93ac53907bf16d0e4097f9_tzzjhz.jpg",
+    title: "Resin Photo Frames",
+    description:
+      "Handcrafted resin frames that preserve memories with artistic flair and luxury detail.",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758953508/41923a9dda1ad3386925f4fed5131edc_wzogot.jpg",
+    title: "Resin Table Designs",
+    description:
+      "Functional masterpieces—resin tables blending art, durability, and modern style.",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758953508/d6b21cf00103c907bfff81484dc5e8e1_gbzkei.jpg",
+    title: "Custom Resin Clocks",
+    description:
+      "Unique resin clock designs that combine artistry with everyday functionality.",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758953508/5b453ac7695bb6b83ca312ae5f27233d_mujfx2.jpg",
+    title: "Resin Decorative Pieces",
+    description:
+      "One-of-a-kind resin creations that elevate your decor with vibrant textures and shine.",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758953508/0e2e9a1046c92cbe0aceba3f2b0ff855_d08wex.jpg",
+    title: "Epoxy Resin Furniture",
+    description:
+      "Luxury epoxy resin furniture crafted for bold statement designs in modern spaces.",
+  },
+];
+
 
   const features = [
     {
@@ -61,35 +66,53 @@ export function ResinArtSection() {
       desc: "Enjoy hassle-free delivery and setup service right to your room of choice.",
     },
   ];
+  const ResinFeatures = [
+    {
+      icon: <Brush className="w-8 h-8 text-white" />,
+      title: "Artistic Excellence",
+      desc: "Each piece is a handcrafted resin masterpiece, designed to capture light, depth, and imagination.",
+    },
+    {
+      icon: <BringToFront className="w-8 h-8 text-white" />,
+      title: "Personalized Service",
+      desc: "Our team works closely with you to create custom pieces that fit your unique style and needs.",
+    },
+    {
+      icon: <TestTubes className="w-8 h-8 text-white" />,
+      title: "Lasting Quality",
+      desc: "Made with premium materials and expert techniques, our resin art is built to inspire for years to come.",
+    },
+  ];
+
 
   return (
     <>
       {/* ===== Hero Section ===== */}
       <section className="relative w-full h-screen overflow-hidden ml-10">
         {/* Hero background as motion div for smoother GPU animation */}
-        <motion.div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "url(https://res.cloudinary.com/dzwxkhkvi/image/upload/f_auto,q_auto,w_1600/v1758808891/poojan-thanekar-u-RIsXlI8Q8-unsplash_dnpzpr.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            willChange: "transform",
-          }}
-          initial={{ scale: 1 }}
-          animate={{ scale: 1.05 }}
-          transition={{ duration: 40, repeat: Infinity, repeatType: "reverse" }}
-        />
+       <motion.div
+  className="absolute inset-0"
+  style={{
+    backgroundImage:
+      "url(https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758955421/istockphoto-1316233938-612x612_1_kapo97.jpg)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    willChange: "transform",
+  }}
+   initial={{ scale: 0.98 }}   // 👈 start slightly zoomed out
+  animate={{ scale: 1 }}
+  transition={{ duration: 40, repeat: Infinity, repeatType: "reverse" }}
+/>
+
 
         {/* Overlay for hero content */}
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
           <div className="w-full max-w-4xl">
             <h1 className="text-3xl lg:text-5xl font-bold mb-4 leading-snug text-[#dbb980]">
-              Dreamy Beds for Ultimate Comfort.
+              Handcrafted Resin Creations That Blend Art and Utility
             </h1>
             <p className="text-base lg:text-lg text-[#bba47d] mb-8">
-              Indulge in unparalleled comfort and sophisticated design with our
-              exquisite collection of beds. Crafted for restful nights and stylish mornings.
+              Unique resin masterpieces that bring art, style, and purpose into your home.
             </p>
 
             {/* Discover Beds button */}
@@ -98,7 +121,7 @@ export function ResinArtSection() {
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-3 px-6 py-3 bg-[#dbb980] text-gray-900 font-medium rounded-xl shadow-lg mx-auto"
             >
-              <span className="text-lg">Discover Beds</span>
+              <span className="text-lg">Discover Resin Arts</span>
               <motion.div
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 1.2, repeat: Infinity }}
@@ -117,13 +140,13 @@ export function ResinArtSection() {
             Why Choose Us?
           </h2>
           <p className="text-gray-700 mb-6 sm:mb-8 md:mb-10 text-center text-sm sm:text-base md:text-lg lg:text-xl">
-  Elevate your space with furniture that blends comfort, style, and timeless quality.
+  Transform your space with resin art that fuses creativity, elegance, and lasting beauty.
 </p>
 
 
           {/* Features grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((item, i) => (
+            {ResinFeatures.map((item, i) => (
               <div key={i} className="p-6 flex flex-col items-center text-center">
                 <div className="flex justify-center items-center w-14 h-14 mb-3 rounded-full bg-gray-800">
                   {item.icon}

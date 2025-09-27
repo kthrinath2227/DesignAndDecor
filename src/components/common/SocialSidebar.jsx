@@ -13,7 +13,11 @@ export function SocialSidebar({ setActiveDecor }) {
   ];
 
   return (
-    <div className="fixed mt-10 left-0 top-0 h-full w-20 flex flex-col items-center justify-center bg-gray-900 z-40 text-[#dbb980]">
+    <div className="
+      fixed mt-10 left-0 top-0 h-full flex flex-col items-center justify-center
+      bg-gray-900 z-40 text-[#dbb980] 
+      w-20 md:w-20 sm:w-16 xs:w-14
+    ">
       <div className="flex flex-col space-y-6 relative">
         {/* DECOR heading */}
         <div className="relative flex flex-col items-center">
@@ -43,22 +47,24 @@ export function SocialSidebar({ setActiveDecor }) {
               onClick={handleClick}
               target={link ? "_blank" : "_self"}
               rel={link ? "noopener noreferrer" : undefined}
-              className="relative group w-10 h-10 flex items-center justify-center"
+              className="relative group flex items-center justify-center
+                         w-10 h-10 md:w-10 md:h-10 sm:w-8 sm:h-8 xs:w-7 xs:h-7"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <Icon
                 aria-label={label}
-                className="w-6 h-6 text-[#bba47d] transition-transform duration-300 
+                className="w-6 h-6 md:w-6 md:h-6 sm:w-5 sm:h-5 xs:w-4 xs:h-4
+                           text-[#bba47d] transition-transform duration-300 
                            group-hover:scale-110 group-hover:drop-shadow-[0_0_6px_#bba47d]"
               />
 
               {/* Tooltip */}
               <span
-                className="absolute left-12 px-3 py-1 text-xs text-white bg-gray-800 
-                           rounded opacity-0 group-hover:opacity-100 transition 
-                           whitespace-nowrap shadow-lg"
+                className="absolute left-12 px-3 py-1 text-xs sm:text-[10px] xs:text-[9px]
+                           text-white bg-gray-800 rounded opacity-0 group-hover:opacity-100
+                           transition whitespace-nowrap shadow-lg"
               >
                 {label}
               </span>
