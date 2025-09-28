@@ -13,9 +13,12 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="min-h-screen relative bg-[#CBB37E] text-gray-800">
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 py-16 max-w-screen-xl mx-auto ml-4 sm:ml-6 md:ml-20">
-
+    <section id="contact" className=" px-10 sm:px-0 min-h-screen relative bg-[#CBB37E] text-gray-800">
+      {/* ✅ Added margin-left responsive to avoid overlap with social sidebar */}
+      <div className="
+        relative z-10 w-full px-4 sm:px-6 lg:px-10 py-16 max-w-screen-xl mx-auto
+        ml-12 sm:ml-16 md:ml-20
+      ">
         {/* Heading */}
         <div className="text-gray-800 mb-10">
           <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold mb-4 md:mb-6 tracking-wide flex items-center gap-2 sm:gap-3">
@@ -59,7 +62,7 @@ export function ContactSection() {
         </div>
 
         {/* Contact Info */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
+<div className="px-10 sm:px-0 grid grid-cols-1 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
           <img
             alt="Logo"
             src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758805302/DESIGN_DECOR_1_bmhkp8.png"
@@ -73,7 +76,7 @@ export function ContactSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <div>
+            <div className="">
               <div className="w-10 h-px bg-gray-800 mb-1 sm:mb-2"></div>
               <h3 className="text-xs sm:text-sm tracking-wider mb-1 sm:mb-2">CALL</h3>
               <p className="text-sm sm:text-base md:text-lg">+91 9160000002</p>
@@ -99,27 +102,31 @@ export function ContactSection() {
 
         {/* Map Button and Image */}
         <div className="w-full relative mt-6 sm:mt-8">
-          <button
-            onClick={handleButtonClick}
-            className="text-xs sm:text-sm md:text-base tracking-wider hover:text-gray-300 transition-colors underline mb-3 sm:mb-4"
-          >
-            VIEW ON MAP
-          </button>
+  <button
+    onClick={() =>
+      window.open(
+        "https://www.google.com/maps/place/D+Luxurio/@17.4599208,78.3523069,17z",
+        "_blank"
+      )
+    }
+    className="text-xs sm:text-sm md:text-base tracking-wider hover:text-gray-300 transition-colors underline mb-3 sm:mb-4"
+  >
+    VIEW ON MAP
+  </button>
 
-          <div className="relative w-full overflow-hidden">
-            <img
-              src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758806876/gmaps_tzqy3g.png"
-              alt="Map"
-              className="w-full h-auto object-cover"
-            />
+  {/* Responsive Google Map */}
+  <div className="relative w-full overflow-hidden rounded-xl shadow-lg">
+    <iframe
+      title="Google Map"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.9956814375887!2d78.35230697421125!3d17.45992080071339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93ef6d2589a1%3A0x70bbba38da4ed5c2!2sD%20Luxurio!5e0!3m2!1sen!2sin!4v1759045938224!5m2!1sen!2sin"
+      className="w-full h-64 sm:h-96 border-0"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</div>
 
-            {/* Top White Fade */}
-            <div className="absolute top-0 left-0 w-full h-24 sm:h-32 bg-gradient-to-b from-white to-transparent pointer-events-none" />
-
-            {/* Bottom White Fade */}
-            <div className="absolute bottom-0 left-0 w-full h-24 sm:h-32 bg-gradient-to-t from-white to-transparent pointer-events-none" />
-          </div>
-        </div>
       </div>
     </section>
   );

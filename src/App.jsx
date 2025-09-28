@@ -14,7 +14,7 @@ import { ProcessTimeline } from '@/components/sections/ProcessTimeline';
 // Import Decor Sections
 import { BedsSection } from '@/components/sections/decor/BedsSection';
 import { SofaSection } from '@/components/sections/decor/SofaSection';
-import { ChairSection } from '@/components/sections/decor/ChairSection';
+// import { ChairSection } from '@/components/sections/decor/ChairSection';
 import { ResinArtSection } from '@/components/sections/decor/ResinArtSection';
 
 function App() {
@@ -60,8 +60,8 @@ function App() {
         return <BedsSection />;
       case 'SofaSection':
         return <SofaSection />;
-      case 'ChairSection':
-        return <ChairSection />;
+      // case 'ChairSection':
+      //   return <ChairSection />;
       case 'ResinArtSection':
         return <ResinArtSection />;
       default:

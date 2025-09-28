@@ -84,10 +84,10 @@ export function BedsSection() {
         {/* Overlay for hero content */}
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
           <div className="w-full max-w-4xl">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-4 leading-snug text-[#dbb980]">
+            <h1 className="text-3xl lg:text-5xl  font-bold mb-4 m-2 leading-snug text-[#dbb980]">
               Dreamy Beds for Ultimate Comfort.
             </h1>
-            <p className="text-base lg:text-lg text-[#bba47d] mb-8">
+            <p className="m-6 sm:mb-8 md:mb-10 text-center text-sm sm:text-base md:text-lg lg:text-xl text-[#bba47d]">
               Indulge in unparalleled comfort and sophisticated design with our
               exquisite collection of beds. Crafted for restful nights and stylish mornings.
             </p>
@@ -136,16 +136,18 @@ export function BedsSection() {
             ))}
 
             {/* Video Card */}
-            <div className="p-4 flex flex-col items-center text-center ">
-              <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                <video
-                  src="https://www.w3schools.com/html/mov_bbb.mp4"
-                  controls
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+           <div className="p-4 flex flex-col items-center text-center">
+  <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+    <video
+      src="https://res.cloudinary.com/dzwxkhkvi/video/upload/v1759045292/28.09.2025_13.10.51_REC_rhmzz3.mp4"
+      autoPlay
+      loop
+      playsInline
+      preload="metadata"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
           </div>
         </div>
       </section>
@@ -218,10 +220,10 @@ export function BedsSection() {
 
     {/* Text Column */}
     <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl md:max-w-2xl">
-      <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-snug">
+      <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 m-1 leading-snug">
         Discover Nature Inspired Furniture
       </h1>
-      <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-snug sm:leading-normal md:leading-relaxed text-center lg:text-left">
+      <p className=" m-4 text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-snug sm:leading-normal md:leading-relaxed text-center lg:text-left">
   Our Nature-Inspired Furniture Collection celebrates minimalist design
   and the timeless beauty of the great outdoors. Each piece blends form
   and function in perfect harmony.
@@ -244,39 +246,41 @@ export function BedsSection() {
 
 <section className="w-full bg-gray-900 flex flex-col items-center text-center px-6 py-20">
   {/* Heading */}
-  <h1 className="text-2xl md:text-3xl lg:text-4xl tracking-widest text-[#dbb980] uppercase mb-10">
+  <h1 className="text-1xl ml-10 md:text-3xl lg:text-3xl tracking-widest text-[#dbb980] uppercase mb-10">
     Beautiful Furniture. <br /> Increased Interior Beauty.
   </h1>
 
   {/* Image with overlay card */}
-  <div className="relative w-full">
-    <motion.img
-      src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758901202/istockphoto-2154995163-612x612_rm2kpj.jpg"
-      alt="decorative"
-      className="w-full h-[60vh] object-cover rounded-lg"
-      loading="lazy"
-      initial={{ scale: 1 }}
-      animate={{ scale: 1.05 }}
-      transition={{ duration: 60, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-    />
+  <div className="relative w-full m-10">
+          <motion.img
+            src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758901202/istockphoto-2154995163-612x612_rm2kpj.jpg"
+            alt="decorative"
+            className="w-full h-56 sm:h-[60vh] object-cover rounded-lg m-5"
+            loading="lazy"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.05 }}
+            transition={{ duration: 60, repeat: Infinity, repeatType: "reverse" }}
+          />
 
-    {/* Overlay card */}
-    <div className="absolute left-1/2 w-9/10 max-w-[90%]" style={{ top: "80%" }}>
-      <div className="bg-white text-gray-900 rounded-xl shadow-lg p-6 w-full -translate-x-1/2">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-widest mb-2">Discover Elegance</h2>
-        <p className="text-gray-700 tracking-widest">
-          Experience furniture that blends comfort, style, and timeless quality.
-        </p>
-      </div>
-    </div>
-  </div>
+          {/* Overlay card */}
+          <div className="absolute left-1/2 w-[80%] sm:w-4/5 max-w-[90%]" style={{ top: "80%" }}>
+            <div className="ml-10 bg-white text-gray-900 rounded-xl shadow-lg p-4 sm:p-6 w-full -translate-x-1/2">
+              <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl tracking-widest mb-1 sm:mb-2">
+                Discover Elegance
+              </h2>
+              <p className="text-xs sm:text-sm md:text-base text-gray-700">
+                Experience furniture that blends comfort, style, and timeless quality.
+              </p>
+            </div>
+          </div>
+        </div>
 
   {/* Testimonials Section */}
-  <div className="mt-16 max-w-4xl w-full">
+  <div className="mt-16  w-full">
   <h2 className="text-xl md:text-2xl font-semibold text-gray-100 mb-8">
     What Our Clients Say
   </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div className="ml-10 grid grid-cols-1 md:grid-cols-2 gap-8">
     {/* Example testimonials */}
     <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
       <p>"Amazing furniture and excellent service!"</p>

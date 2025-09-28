@@ -1,64 +1,94 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ChevronDown, Award, ShieldCheck, Truck } from "lucide-react";
+import {
+  ChevronDown,
+  Award,
+  ShieldCheck,
+  Truck,
+  Brush,
+  TestTubes,
+  BringToFront,
+} from "lucide-react";
 
 export function SofaSection() {
   const projects = [
     {
       image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808882/Scandinavian_Solid_Wood_Storage_with_Headboard_Panel_Standard_Bed_-_California_King_Single_Bed_Beds_ezamid.jpg",
-      title: "Luxury King Bed",
+        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005573/sofa-1_rv8myi.avif",
+      title: "Luxury Leather Sofas",
       description:
-        "Premium comfort with elegant design, crafted for restful nights.",
+        "Elegant leather sofas crafted with premium materials for timeless comfort and style.",
     },
     {
       image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808882/King_Size_Cot_Designs_for_Spacious_Comfort_lgs6bc.jpg",
-      title: "Modern Platform Bed",
-      description: "Minimalist style designed for contemporary and sleek interiors.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808887/carlos-masias-f3z1EjsxPCs-unsplash_bgx9au.jpg",
-      title: "Classic Wooden Bed",
-      description: "Timeless craftsmanship meets unmatched comfort and durability.",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808881/download_hyrzjx.jpg",
-      title: "Upholstered Bed Frame",
+        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005572/saofa-3_br4m8f.avif",
+      title: "Fabric Sofas",
       description:
-        "Soft, padded headboard for cozy luxury and modern aesthetics.",
+        "Soft, stylish fabric sofas designed to match modern interiors with cozy charm.",
     },
     {
       image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808881/Bedroom_lwbx29.jpg",
-      title: "Canopy Bed",
-      description: "Elegant design with a touch of grandeur and sophistication.",
+        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005569/sofa-bg_ojqsuw.avif",
+      title: "Sectional Sofas",
+      description:
+        "Spacious sectional sofas that combine versatility, comfort, and modern design.",
     },
     {
       image:
-        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758808891/poojan-thanekar-u-RIsXlI8Q8-unsplash_dnpzpr.jpg",
-      title: "Storage Bed",
-      description: "Smart functionality with generous built-in storage for modern living",
+        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005568/main-1_gqazvn.jpg",
+      title: "Recliner Sofas",
+      description:
+        "Relax in luxury with recliner sofas built for ultimate comfort and durability.",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005569/sofa-7_m4z2di.jpg",
+      title: "Loveseats",
+      description:
+        "Compact loveseats perfect for cozy spaces without compromising style or comfort.",
+    },
+    {
+      image:
+        "https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005568/sofa-10_ypkfut.jpg",
+      title: "Sofa Beds",
+      description:
+        "Functional sofa beds offering comfort by day and convenience by night.",
     },
   ];
 
   const features = [
     {
       icon: <Award className="w-8 h-8 text-white" />,
-      title: "Superior Quality",
-      desc: "We use only the finest materials to ensure durability and luxury in every piece.",
+      title: "Premium Quality",
+      desc: "Crafted from the finest materials to ensure long-lasting comfort and luxury.",
     },
     {
       icon: <ShieldCheck className="w-8 h-8 text-white" />,
-      title: "Expert Craftsmanship",
-      desc: "Our furniture is built by skilled artisans with a passion for detail and design.",
+      title: "Skilled Craftsmanship",
+      desc: "Each sofa is built with precision by expert artisans who value detail.",
     },
     {
       icon: <Truck className="w-8 h-8 text-white" />,
-      title: "White-Glove Delivery",
-      desc: "Enjoy hassle-free delivery and setup service right to your room of choice.",
+      title: "Doorstep Delivery",
+      desc: "Hassle-free delivery and professional setup in your living room.",
+    },
+  ];
+
+  const SofaFeatures = [
+    {
+      icon: <Brush className="w-8 h-8 text-white" />,
+      title: "Stylish Designs",
+      desc: "Modern, classic, and custom designs to match every home interior.",
+    },
+    {
+      icon: <BringToFront className="w-8 h-8 text-white" />,
+      title: "Customization Options",
+      desc: "Choose fabrics, colors, and sizes to suit your unique taste.",
+    },
+    {
+      icon: <TestTubes className="w-8 h-8 text-white" />,
+      title: "Durability Assured",
+      desc: "High-quality builds designed to last for years of everyday use.",
     },
   ];
 
@@ -66,12 +96,11 @@ export function SofaSection() {
     <>
       {/* ===== Hero Section ===== */}
       <section className="relative w-full h-screen overflow-hidden ml-10">
-        {/* Hero background as motion div for smoother GPU animation */}
         <motion.div
           className="absolute inset-0"
           style={{
             backgroundImage:
-              "url(https://res.cloudinary.com/dzwxkhkvi/image/upload/f_auto,q_auto,w_1600/v1758808891/poojan-thanekar-u-RIsXlI8Q8-unsplash_dnpzpr.jpg)",
+              "url(https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005575/sofa-main_jnyfn6.avif)",
             backgroundSize: "cover",
             backgroundPosition: "center",
             willChange: "transform",
@@ -81,24 +110,22 @@ export function SofaSection() {
           transition={{ duration: 40, repeat: Infinity, repeatType: "reverse" }}
         />
 
-        {/* Overlay for hero content */}
+        {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center px-6">
           <div className="w-full max-w-4xl">
-            <h1 className="text-3xl lg:text-5xl font-bold mb-4 leading-snug text-[#dbb980]">
-              Dreamy Beds for Ultimate Comfort.
+            <h1 className="text-3xl lg:text-5xl font-bold mb-4 m-2 leading-snug text-[#dbb980]">
+              Premium Sofas That Redefine Comfort & Style
             </h1>
-            <p className="text-base lg:text-lg text-[#bba47d] mb-8">
-              Indulge in unparalleled comfort and sophisticated design with our
-              exquisite collection of beds. Crafted for restful nights and stylish mornings.
+            <p className="m-6 sm:mb-8 md:mb-10 text-center text-sm sm:text-base md:text-lg lg:text-xl text-[#bba47d]">
+              Explore our handcrafted sofas designed for modern living spaces.
             </p>
 
-            {/* Discover Beds button */}
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center gap-3 px-6 py-3 bg-[#dbb980] text-gray-900 font-medium rounded-xl shadow-lg mx-auto"
             >
-              <span className="text-lg">Discover Beds</span>
+              <span className="text-lg">Discover Sofas</span>
               <motion.div
                 animate={{ y: [0, 6, 0] }}
                 transition={{ duration: 1.2, repeat: Infinity }}
@@ -114,17 +141,19 @@ export function SofaSection() {
       <section className="w-full bg-[#CBB37E] text-gray-800 py-16 px-6 flex justify-center ml-10">
         <div className="max-w-6xl w-full">
           <h2 className="text-3xl font-semibold mb-5 text-center">
-            Why Choose Us?
+            Why Choose Our Sofas?
           </h2>
           <p className="text-gray-700 mb-6 sm:mb-8 md:mb-10 text-center text-sm sm:text-base md:text-lg lg:text-xl">
-  Elevate your space with furniture that blends comfort, style, and timeless quality.
-</p>
+            Experience unmatched comfort and timeless design with our premium
+            sofas built for every lifestyle.
+          </p>
 
-
-          {/* Features grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((item, i) => (
-              <div key={i} className="p-6 flex flex-col items-center text-center">
+              <div
+                key={i}
+                className="p-6 flex flex-col items-center text-center"
+              >
                 <div className="flex justify-center items-center w-14 h-14 mb-3 rounded-full bg-gray-800">
                   {item.icon}
                 </div>
@@ -136,174 +165,158 @@ export function SofaSection() {
             ))}
 
             {/* Video Card */}
-            <div className="p-4 flex flex-col items-center text-center ">
-              <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
-                <video
-                  src="https://www.w3schools.com/html/mov_bbb.mp4"
-                  controls
-                  preload="metadata"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
+              <div className="p-4 flex flex-col items-center text-center">
+  <div className="w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+    <video
+      src="https://res.cloudinary.com/dzwxkhkvi/video/upload/v1759045293/28.09.2025_13.09.18_REC_jys6id.mp4"
+      autoPlay
+      loop
+      playsInline
+      preload="metadata"
+      className="w-full h-full object-cover"
+    />
+  </div>
+</div>
           </div>
         </div>
       </section>
 
-      {/* ===== Premium Collection Section ===== */}
-     <section className="min-h-screen bg-gray-900 flex ml-20">
-  <div className="max-w-7xl mx-auto px-6 py-20">
-    {/* Section Heading */}
-    <h2 className="text-2xl md:text-3xl tracking-widest text-[#dbb980] uppercase mb-10 text-center">
-      Our Premium Collection
-    </h2>
+      {/* ===== Premium Sofa Collection Section ===== */}
+      <section className="min-h-screen bg-gray-900 flex ml-20">
+        <div className="max-w-7xl mx-auto px-6 py-20">
+          <h2 className="text-2xl md:text-3xl tracking-widest text-[#dbb980] uppercase mb-10 text-center">
+            Our Premium Sofa Collection
+          </h2>
 
-    {/* Equal Grid Layout */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      {projects.map((project, index) => (
-        <motion.div
-          key={index}
-          className="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500 group bg-white/5 backdrop-blur-md"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-        >
-          {/* Image Section with very slow zoom */}
-          <motion.img
-            src={project.image}
-            alt={project.title}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
+              <motion.div
+                key={index}
+                className="overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-500 group bg-white/5 backdrop-blur-md"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <motion.img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="w-full h-80 object-cover"
+                  initial={{ scale: 1.02 }}
+                  animate={{ scale: 1.07 }}
+                  transition={{
+                    duration: 60,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "linear",
+                  }}
+                />
+                <div className="w-full p-5 rounded-b-xl backdrop-blur-lg border-b border-l border-r border-white/20 shadow-xl">
+                  <h3 className="text-lg font-semibold text-[#dbb980]">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-gray-200 mb-3">
+                    {project.description}
+                  </p>
+                  <button className="px-4 py-2 bg-[#dbb980] text-gray-900 font-medium text-sm rounded-full shadow hover:bg-[#c4a870] transition">
+                    View More
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== Nature Inspired Sofa Section ===== */}
+      <section className="w-full bg-[#CBB37E] text-gray-800 py-16 px-6 flex justify-center ml-10">
+        <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center lg:items-start gap-8">
+          <img
+            src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005572/chair-1_kvhqle.avif"
+            alt="sofa"
+            className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto object-contain shadow-lg"
             loading="lazy"
-            className="w-full h-80 object-cover"
-            initial={{ scale: 1.02 }}
-            animate={{ scale: 1.07 }}
-            transition={{
-              duration: 60, // super slow zoom
-              repeat: Infinity,
-              repeatType: "reverse",
-              ease: "linear",
-            }}
           />
 
-          {/* Text Section (glass effect) */}
-          <div className="w-full p-5 rounded-b-xl backdrop-blur-lg border-b border-l border-r border-white/20 shadow-xl">
-            <h3 className="text-lg font-semibold text-[#dbb980]">
-              {project.title}
-            </h3>
-            <p className="text-sm text-gray-200 mb-3">
-              {project.description}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl md:max-w-2xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 m-1 leading-snug">
+              Discover Nature-Inspired Sofa Collection
+            </h1>
+            <p className=" m-4 text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-snug sm:leading-normal md:leading-relaxed text-center lg:text-left">
+              Our Nature-Inspired Sofa Collection blends earthy tones and
+              textures with modern design, creating comfort that feels as good
+              as it looks.
             </p>
-            <button className="px-4 py-2 bg-[#dbb980] text-gray-900 font-medium text-sm rounded-full shadow hover:bg-[#c4a870] transition">
-              View More
-            </button>
           </div>
-        </motion.div>
-      ))}
-    </div>
-  </div>
-</section>
 
+          <img
+            src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005571/side-1_jwc0ee.jpg"
+            alt="sofa set"
+            className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto object-contain shadow-lg"
+            loading="lazy"
+          />
+        </div>
+      </section>
 
-      {/* ===== Discover Nature Section ===== */}
-      <section className="w-full bg-[#CBB37E] text-gray-800 py-16 px-6 flex justify-center ml-10">
-  <div className="max-w-7xl w-full flex flex-col lg:flex-row items-center lg:items-start gap-8">
-    
-    {/* Left Image */}
-    <img
-      src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758871282/1-750x650_ieev3m.jpg"
-      alt="chair"
-      className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto object-contain"
-      loading="lazy"
-    />
+      {/* ===== Closing Section with Testimonials ===== */}
+      <section className="w-full bg-gray-900 flex flex-col items-center text-center px-6 py-20">
+        <h1 className="text-1xl ml-10 md:text-3xl lg:text-3xl tracking-widest text-[#dbb980] uppercase mb-10">
+          Stylish Sofas. <br /> Designed for Modern Living.
+        </h1>
 
-    {/* Text Column */}
-    <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl md:max-w-2xl">
-      <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-gray-900 mb-4 leading-snug">
-        Discover Nature Inspired Furniture
-      </h1>
-      <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl leading-snug sm:leading-normal md:leading-relaxed text-center lg:text-left">
-  Our Nature-Inspired Furniture Collection celebrates minimalist design
-  and the timeless beauty of the great outdoors. Each piece blends form
-  and function in perfect harmony.
-</p>
+        <div className="relative w-full m-10">
+          <motion.img
+            src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1759005568/sofa-9_g1jh2o.jpg"
+            alt="sofa decor"
+            className="w-full h-56 sm:h-[60vh] object-cover rounded-lg m-5"
+            loading="lazy"
+            initial={{ scale: 1 }}
+            animate={{ scale: 1.05 }}
+            transition={{ duration: 60, repeat: Infinity, repeatType: "reverse" }}
+          />
 
-    </div>
+          <div
+            className="absolute left-1/2 w-[80%] sm:w-4/5 max-w-[90%] "
+            style={{ top: "80%" }}
+          >
+            <div className="ml-10 bg-white text-gray-900 rounded-xl shadow-lg p-4 sm:p-6 w-full -translate-x-1/2">
+              <h2 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl tracking-widest mb-1 sm:mb-2">
+                Discover Comfort
+              </h2>
+              <p className="text-xs sm:text-sm md:text-base text-gray-700">
+                Experience sofas that blend comfort, durability, and timeless
+                elegance.
+              </p>
+            </div>
+          </div>
+        </div>
 
-    {/* Right Image */}
-    <img
-      src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758898860/ehfdzdvw2po06wvrkb8u_ztkg4h.jpg"
-      alt="stool"
-      className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto object-contain"
-      loading="lazy"
-    />
-
-  </div>
-</section>
-
-
-
-<section className="w-full bg-gray-900 flex flex-col items-center text-center px-6 py-20">
-  {/* Heading */}
-  <h1 className="text-2xl md:text-3xl lg:text-4xl tracking-widest text-[#dbb980] uppercase mb-10">
-    Beautiful Furniture. <br /> Increased Interior Beauty.
-  </h1>
-
-  {/* Image with overlay card */}
-  <div className="relative w-full">
-    <motion.img
-      src="https://res.cloudinary.com/dzwxkhkvi/image/upload/v1758901202/istockphoto-2154995163-612x612_rm2kpj.jpg"
-      alt="decorative"
-      className="w-full h-[60vh] object-cover rounded-lg"
-      loading="lazy"
-      initial={{ scale: 1 }}
-      animate={{ scale: 1.05 }}
-      transition={{ duration: 60, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-    />
-
-    {/* Overlay card */}
-    <div className="absolute left-1/2 w-9/10 max-w-[90%]" style={{ top: "80%" }}>
-      <div className="bg-white text-gray-900 rounded-xl shadow-lg p-6 w-full -translate-x-1/2">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-widest mb-2">Discover Elegance</h2>
-        <p className="text-gray-700 tracking-widest">
-          Experience furniture that blends comfort, style, and timeless quality.
-        </p>
-      </div>
-    </div>
-  </div>
-
-  {/* Testimonials Section */}
-  <div className="mt-16 max-w-4xl w-full">
-  <h2 className="text-xl md:text-2xl font-semibold text-gray-100 mb-8">
-    What Our Clients Say
-  </h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-    {/* Example testimonials */}
-    <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
-      <p>"Amazing furniture and excellent service!"</p>
-      <span className="mt-2 block font-bold">— Murali Krishna</span>
-    </div>
-    <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
-      <p>"Transformed my living space beautifully!"</p>
-      <span className="mt-2 block font-bold">— Thrinath Kandula</span>
-    </div>
-    <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
-      <p>"The craftsmanship is outstanding. Truly premium quality!"</p>
-      <span className="mt-2 block font-bold">— Arjun </span>
-    </div>
-    <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
-      <p>"Loved the customization options, it fits perfectly in my home."</p>
-      <span className="mt-2 block font-bold">— Priya Nair</span>
-    </div>
-  </div>
-</div>
-
-</section>
-
-
-
-
-
-
+        {/* Testimonials */}
+        <div className="mt-16  w-full">
+          <h2 className="text-xl md:text-2xl font-semibold text-gray-100 mb-8">
+            What Our Customers Say
+          </h2>
+          <div className="ml-10 grid grid-cols-1 md:grid-cols-2 gap-8 shadow-lg">
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
+              <p>"The sofa quality is amazing and super comfy!"</p>
+              <span className="mt-2 block font-bold">— Murali Krishna</span>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
+              <p>"My living room feels luxurious with this sofa set."</p>
+              <span className="mt-2 block font-bold">— Thrinath Kandula</span>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
+              <p>"Stylish, durable, and exactly what I wanted."</p>
+              <span className="mt-2 block font-bold">— Arjun </span>
+            </div>
+            <div className="bg-gray-800 p-6 rounded-lg shadow-md text-gray-200">
+              <p>"Perfect blend of comfort and design. Highly recommend!"</p>
+              <span className="mt-2 block font-bold">— Priya Nair</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

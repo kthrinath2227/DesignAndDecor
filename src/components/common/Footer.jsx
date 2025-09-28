@@ -6,7 +6,13 @@ export function Footer({ scrollToSection }) {
 
   return (
     <footer className="bg-gray-900 w-full px-6 py-8">
-      <div className="flex justify-between items-center pt-8 border-t border-gray-100 max-w-screen-xl mx-auto">
+      <div
+        className="
+          flex justify-between items-center pt-8 border-t border-gray-100 
+          max-w-screen-xl mx-auto
+          ml-16 sm:ml-20 md:ml-24
+        "
+      >
         {/* ✅ Clickable link */}
         <a
           href="https://thedevstechnologies.online"
